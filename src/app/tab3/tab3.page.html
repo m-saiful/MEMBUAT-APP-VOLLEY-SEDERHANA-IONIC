@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <center>
+      <ion-title>Jadwal Pertandingan</ion-title>
+    </center>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item *ngFor="let game of match.events">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          {{game.strHomeTeam}}
+        </ion-col>
+        <ion-col class="ion-text-center">
+          vs
+        </ion-col>
+        <ion-col class="ion-text-center">
+          {{game.strAwayTeam}}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <small>
+            <ion-label color="medium">
+
+              {{game.strDate}} - {{game.strTime}}
+            </ion-label>
+          </small>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title align="center">
+      League
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Card Title</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the
+      woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card> -->
+
+  <ion-list>
+    <!-- <ion-list-header> League </ion-list-header> -->
+
+    <ion-item *ngFor="let volley of league.events">
+      <ion-avatar slot="start">
+        <img src="{{volley.strFoto}}" />
+        
+      </ion-avatar>
+      <ion-label>
+        <h2>{{volley.strLeague}}</h2>
+        <h3>{{volley.strSport}}</h3>
+        <p>{{volley.strLeagueAlternate}}</p>
+      </ion-label>
+    </ion-item>
+
+    
+  </ion-list>
+
+
+</ion-content>
